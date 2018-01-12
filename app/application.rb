@@ -6,7 +6,7 @@ class Application
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
       item = Item.all.find{|i| i.name == item_name}
-      puts "#{item.name}"
+      puts "huh #{item.name}"
       if item != nil
         resp.status = 200
         resp.write "#{item.price}"
