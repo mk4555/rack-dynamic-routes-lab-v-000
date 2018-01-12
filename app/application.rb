@@ -5,7 +5,6 @@ class Application
 
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
-      puts "YO #{item}"
       item = Item.all.find{|i| i.name == item_name}
       if item
         resp.status = 200
