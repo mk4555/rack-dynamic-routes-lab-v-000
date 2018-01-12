@@ -5,7 +5,7 @@ class Application
 
     if req.path.match(/items/)
       item = req.path.split("/items/").last
-      puts "#{item}"
+      puts "YO #{item}"
       if @@items.include?(item)
         resp.status = 200
         resp.write "#{item.price}"
