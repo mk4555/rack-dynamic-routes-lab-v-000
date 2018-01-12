@@ -4,6 +4,7 @@ class Item
   def initialize(name,price)
     @name = name
     @price = price
+    @@items << slef
   end
 
   def self.all
