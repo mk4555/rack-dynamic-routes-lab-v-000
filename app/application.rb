@@ -5,7 +5,9 @@ class Application
 
     if req.path.match(/items/)
       item = req.path.split("/items/").last
-      if
+      if @@items.include?(item)
+        resp.status = 200
+        resp.write "#{item.price}"
     else
       resp.write "Route not found"
       resp.status = 404
