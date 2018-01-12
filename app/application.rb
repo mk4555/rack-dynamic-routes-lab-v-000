@@ -7,7 +7,7 @@ class Application
       item_name = req.path.split("/items/").last
       puts "YO #{item}"
       item = Item.all.find{|i| i.name == item_name}
-      if @@items.find
+      if item
         resp.status = 200
         resp.write "#{item.price}"
       else
