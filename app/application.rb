@@ -6,7 +6,7 @@ class Application
     if req.path.match(/items/)
       item = req.path.split("/items/").last
       puts "YO #{item}"
-      if @@items.find{|t| t.name == item.name}
+      if @@items.find{|t| t.name == item}
         resp.status = 200
         resp.write "#{item.price}"
       else
